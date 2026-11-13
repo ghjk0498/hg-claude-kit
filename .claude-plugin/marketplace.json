@@ -1,0 +1,29 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "hg-claude-kit",
+  "description": "측정해서 쓸모가 확인된 Claude Code 도구 모음. 플러그인 단위로 켜고 끈다.",
+  "owner": {"name": "hg"},
+  "plugins": [
+    {
+      "name": "torchcast",
+      "description": "torchcast 판단 모델로 대량 항목(로그, 이슈, 테스트 실패)을 먼저 거르는 MCP 도구(classify, ask, health)",
+      "version": "0.3.0",
+      "source": "./plugins/torchcast",
+      "category": "development"
+    },
+    {
+      "name": "torchcast-stop-check",
+      "description": "턴 끝에 '검증 없는 완료 주장'과 '실패 결과와 어긋난 성공 주장'을 torchcast로 판단해 한 번 막는 Stop 훅",
+      "version": "0.1.0",
+      "source": "./plugins/torchcast-stop-check",
+      "category": "development"
+    },
+    {
+      "name": "grade-agents",
+      "description": "작업량 등급 서브에이전트 6종. 모델 배정은 tiers.toml 하나에서 생성하고, Fable은 judge-max 등급으로만 쓴다",
+      "version": "0.2.0",
+      "source": "./plugins/grade-agents",
+      "category": "development"
+    }
+  ]
+}

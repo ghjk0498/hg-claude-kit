@@ -1,0 +1,16 @@
+[project]
+name = "torchcast-stop-check"
+version = "0.1.0"
+description = "torchcast Stop 훅 (개발·테스트용 설정. 훅 자체는 표준 라이브러리만 쓴다)"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = ["pytest>=9.2.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

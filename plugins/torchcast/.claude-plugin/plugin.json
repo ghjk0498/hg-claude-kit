@@ -1,0 +1,6 @@
+{
+  "name": "torchcast",
+  "version": "0.3.0",
+  "description": "torchcast 판단 모델로 대량 항목을 먼저 거르는 MCP 도구(classify, ask, health). 항목 내용은 Meshnet의 torchcast 서버로 전송된다.",
+  "author": {"name": "hg"}
+}

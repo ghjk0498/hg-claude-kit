@@ -1,0 +1,31 @@
+checked = "2026-11-13"       # 아래 버전을 마지막으로 확인한 날
+
+[models]                     # 쓸 수 있는 별칭과, 확인한 날 Anthropic API에서 가리키던 버전
+haiku = "Haiku 5.5"
+sonnet = "Sonnet 5.5"
+opus = "Opus 5.5"
+fable = "Fable 5.2"
+
+[tiers.finder-low]
+model = "haiku"
+effort = "low"
+
+[tiers.routine-medium]
+model = "haiku"
+effort = "medium"
+
+[tiers.worker-medium]
+model = "sonnet"
+effort = "medium"
+
+[tiers.worker-high]
+model = "sonnet"
+effort = "high"
+
+[tiers.judge-high]
+model = "opus"
+effort = "high"
+
+[tiers.judge-max]
+model = "fable"
+effort = "high"

@@ -1,0 +1,16 @@
+[project]
+name = "grade-agents"
+version = "0.1.0"
+description = "등급 에이전트 생성 스크립트 (개발·테스트용 설정. 스크립트는 표준 라이브러리만 쓴다)"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = ["pytest>=9.2.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["scripts"]

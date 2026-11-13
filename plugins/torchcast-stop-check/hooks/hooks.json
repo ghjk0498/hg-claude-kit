@@ -1,0 +1,16 @@
+{
+  "description": "torchcast로 완료 주장의 검증 여부를 판단해 Stop을 한 번 막는다. 서버가 없거나 불확실하면 통과.",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -I \"${CLAUDE_PLUGIN_ROOT}/stop_check.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

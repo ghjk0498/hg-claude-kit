@@ -1,0 +1,6 @@
+{
+  "name": "torchcast-stop-check",
+  "version": "0.1.0",
+  "description": "턴 끝에 검증 없는 완료 주장과 실패 결과와 어긋난 성공 주장을 torchcast로 판단해 한 번 막는 Stop 훅. 코드를 고친 턴의 마지막 응답과 도구 호출 요약이 Meshnet의 torchcast 서버로 전송된다.",
+  "author": {"name": "hg"}
+}

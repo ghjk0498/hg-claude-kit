@@ -1,0 +1,6 @@
+{
+  "name": "grade-agents",
+  "version": "0.2.0",
+  "description": "작업량 등급 서브에이전트 6종(finder-low, routine-medium, worker-medium, worker-high, judge-high, judge-max). 모델 배정은 tiers.toml에서 생성한다. 외부 전송 없음.",
+  "author": {"name": "hg"}
+}

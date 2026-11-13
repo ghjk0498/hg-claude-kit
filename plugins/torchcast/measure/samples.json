@@ -1,0 +1,61 @@
+{
+  "tasks": [
+    {
+      "name": "log_level",
+      "question": "이 로그 줄의 성격은?",
+      "type": "choice",
+      "options": {
+        "error": "실패, 예외, 요청·작업이 실제로 실패함",
+        "warning": "아직 실패는 아니지만 주의가 필요한 이상 징후",
+        "info": "정상 동작 기록"
+      },
+      "items": [
+        ["2026-11-10 09:12:01 ERROR [api] Unhandled exception in POST /orders: NullPointerException at OrderService.java:88", "error"],
+        ["2026-11-10 09:12:02 INFO  [api] GET /health 200 3ms", "info"],
+        ["2026-11-10 09:12:05 WARN  [db] connection pool 92% used (46/50)", "warning"],
+        ["psycopg2.OperationalError: could not connect to server: Connection refused", "error"],
+        ["Started Application in 4.21 seconds (JVM running for 5.0)", "info"],
+        ["retrying request to payments-svc (attempt 2/5) after 503", "warning"],
+        ["[worker-3] job 8812 finished: 1200 rows written", "info"],
+        ["FATAL: password authentication failed for user \"app\"", "error"],
+        ["Deprecated API usage: Buffer() is deprecated, use Buffer.from()", "warning"],
+        ["Killed process 2211 (java) total-vm:8123456kB, OOM", "error"]
+      ]
+    },
+    {
+      "name": "test_failure_is_env",
+      "question": "이 테스트 실패는 코드 결함이 아니라 환경·인프라 문제(네트워크, 타임아웃, 디스크, 권한, 외부 서비스) 때문인가?",
+      "type": "noul",
+      "items": [
+        ["FAILED test_upload - ConnectionResetError: [Errno 54] Connection reset by peer (s3.amazonaws.com)", true],
+        ["FAILED test_total - AssertionError: assert 105 == 100 (discount applied twice)", false],
+        ["FAILED test_build_index - OSError: [Errno 28] No space left on device", true],
+        ["FAILED test_parse_date - ValueError: time data '2026-13-01' does not match format '%Y-%m-%d'", false],
+        ["FAILED test_login_e2e - TimeoutError: page.goto: Timeout 30000ms exceeded (staging.example.test)", true],
+        ["FAILED test_sort_users - AssertionError: lists differ at index 2: 'bob' != 'alice'", false],
+        ["FAILED test_cache - KeyError: 'user_id' in serialize_session()", false],
+        ["FAILED test_write_report - PermissionError: [Errno 13] Permission denied: '/var/reports'", true]
+      ]
+    },
+    {
+      "name": "review_comment_kind",
+      "question": "이 코드 리뷰 지적의 종류는?",
+      "type": "choice",
+      "options": {
+        "bug": "동작이 틀리거나 장애·보안 문제를 일으킬 수 있는 결함 지적",
+        "style": "이름, 포맷, 구조 등 동작과 무관한 개선 제안",
+        "question": "의도를 묻는 질문"
+      },
+      "items": [
+        ["이 루프가 i <= len(items)라서 마지막에 IndexError가 날 것 같습니다.", "bug"],
+        ["변수 이름 tmp2보다 retry_count가 읽기 쉬울 것 같아요.", "style"],
+        ["여기서 캐시를 끄신 이유가 있나요?", "question"],
+        ["사용자 입력을 그대로 SQL 문자열에 붙이고 있어서 인젝션 위험이 있습니다.", "bug"],
+        ["이 함수는 너무 길어서 두 개로 나누면 좋겠습니다.", "style"],
+        ["타임아웃 값을 30초로 정한 근거가 궁금합니다.", "question"],
+        ["락을 잡은 채로 예외가 나면 해제가 안 됩니다. finally에서 풀어야 할 것 같아요.", "bug"],
+        ["import 순서를 isort 기준으로 맞춰 주세요.", "style"]
+      ]
+    }
+  ]
+}
