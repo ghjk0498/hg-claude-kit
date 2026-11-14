@@ -40,7 +40,7 @@ export const register: Register = on => {
     return (
       <Box>
         <Text color="warning">컨텍스트 {k(reading.tokens)} · 손익분기 {k(BREAK_EVEN)} 넘음</Text>
-        <Text dimColor> — 1시간 넘게 비울 때: 이어갈 일이면 /compact, 다른 일이면 새 세션</Text>
+        <Text dimColor> — 1시간+ 비울 때: 이어감 /compact · 다른 일 새 세션 · 맡기고 감 /away</Text>
       </Box>
     )
   })
