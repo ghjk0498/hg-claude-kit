@@ -1,6 +1,6 @@
 {
   "name": "away",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "자리를 오래 비우기 전에 세션 컨텍스트와 프롬프트 캐시 비용을 재고 그대로 둘지·/compact·핸드오프를 정한다. 로컬 transcript만 읽는다. 외부 전송 없음.",
   "author": {"name": "hg"}
 }

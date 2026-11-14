@@ -31,3 +31,4 @@
 - 2026-11-14: away 0.1.0. `~/.claude/skills/away/`에 있던 스킬을 플러그인으로 옮겼다. 스크립트 경로를 `${CLAUDE_PLUGIN_ROOT}` 기준으로 바꿨고, 스킬 이름은 `away:away`가 됐다. 사용자 스킬 사본은 지웠다.
 - 2026-11-14: away를 Desktop 자동 압축과 비교했다. 자동 압축은 1시간 넘는 복귀 14번 중 3번만 걸려 away를 대신하지 않는다. 아끼는 금액은 해당 복귀 한 번에 약 $1~2다.
 - 2026-11-14: context-meter 0.1.0. Desktop은 `statusLine`을 그리지 않아(직접 시험) 프롬프트 위 띠 mod로 만들었다. 손익분기는 모델별 차이가 작아 125K 하나로 둔다.
+- 2026-11-15: away 0.1.1. Windows Desktop에 설치해 보니 `python3`가 Microsoft Store 바로가기(앱 실행 별칭)라 측정 명령이 실패했다(종료 코드 9009). SKILL.md가 `python3`를 먼저 시험하고 안 되면 `python`으로 돌리게 했다. 스크립트는 Windows `python` 3.13에서 그대로 돈다(직접 확인).

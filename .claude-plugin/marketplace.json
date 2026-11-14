@@ -30,14 +30,14 @@
     {
       "name": "away",
       "description": "자리를 오래 비우기 전에 컨텍스트와 프롬프트 캐시 비용을 재고 그대로 둘지·/compact·핸드오프를 정하는 스킬",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "source": "./plugins/away",
       "category": "productivity"
     },
     {
       "name": "context-meter",
       "description": "컨텍스트가 손익분기(125K)를 넘으면 프롬프트 위에 떠나기 전 /compact·새 세션 안내 띠를 띄우는 mod",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "source": "./plugins/context-meter",
       "category": "productivity"
     }

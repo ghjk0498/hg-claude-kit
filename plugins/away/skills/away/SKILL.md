@@ -13,8 +13,11 @@ description: |
 ## 1. 측정
 
 ```bash
-python3 "${CLAUDE_PLUGIN_ROOT}/skills/away/away_check.py"
+PY=python3; "$PY" -c '' 2>/dev/null || PY=python
+"$PY" "${CLAUDE_PLUGIN_ROOT}/skills/away/away_check.py"
 ```
+
+첫 줄은 Windows 때문에 있다. Windows의 `python3`는 Microsoft Store 바로가기(앱 실행 별칭)라 실행하면 실패하므로, 그때는 `python`으로 돌린다.
 
 세션 id는 `$CLAUDE_CODE_SESSION_ID`에서 읽는다. 출력에서 `context tokens`, `baseline`, `conversation part`, `after compact`, `cache TTL`, `cache now`, `resume, cold`, `compact first`, `break-even`을 쓴다.
 

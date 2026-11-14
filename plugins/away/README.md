@@ -15,7 +15,7 @@ claude plugin install away@hg-claude-kit --scope user
 ## 구성
 
 - `skills/away/SKILL.md`: 측정 → 묻기 → 판정 → 보존 → 실행 → 복귀 메모 순서
-- `skills/away/away_check.py`: 마지막 턴의 usage로 컨텍스트, 바닥값(압축해도 남는 부분), 캐시 TTL, 식은 복귀 비용, 압축 비용, 손익분기를 계산한다. 의존성 없음(python3 표준 라이브러리)
+- `skills/away/away_check.py`: 마지막 턴의 usage로 컨텍스트, 바닥값(압축해도 남는 부분), 캐시 TTL, 식은 복귀 비용, 압축 비용, 손익분기를 계산한다. 의존성 없음(python3 표준 라이브러리). Windows처럼 `python3`가 안 되면 `python`으로 돌린다
 
 ## 다시 잴 값
 
