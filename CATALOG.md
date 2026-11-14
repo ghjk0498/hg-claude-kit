@@ -9,6 +9,7 @@
 | [torchcast-stop-check](plugins/torchcast-stop-check/README.md) | Stop 훅 | 검증 없는 완료 주장, 실패와 어긋난 성공 주장을 한 번 막기 | trial: hg-claude-kit에서만 local로 켬 (2026-11-11) | 코드를 고친 턴의 마지막 응답과 도구 요약 | 합성 시나리오 개발용 25/26, 확인용 9/9, 잘못 막음 0 (2026-11-11) | 안 함 | 켠 뒤 `decisions.jsonl`로 실제 오탐 세기 |
 | [grade-agents](plugins/grade-agents/README.md) | 서브에이전트 | 작업량 등급별로 모델·노력 수준을 고정해 맡기기. 배정은 `tiers.toml` 하나 | trial (2026-11-11) | 없음 | 실제 세션 확인 5/5 (2026-11-13, 0.2.0 기준 항목 1·2·6·7·8) | 안 함 | 새 모델이 나오면 `tiers.toml`과 모델 보정 블록 |
 | [away](plugins/away/README.md) | 스킬 | 자리 비우기 전 컨텍스트·캐시 비용을 재고 그대로/압축/핸드오프 정하기 | trial (2026-11-14) | 없음 | 실사용 10회(2026-11-02~14). 압축 직후 실제 입력 88~97K, 추정 88~101K와 맞음(3회). 1시간 넘는 복귀 14번: 미리 압축 3번은 복귀 쓰기 35~52K, 압축 없음 8번은 113~343K. Desktop 자동 압축은 3번만 걸림 | 안 함 | Fable 5.2 단가를 `PRICES`에 넣기(지금은 Opus 단가로 계산). 판정이 맞았는지 계속 세기 |
+| [context-meter](plugins/context-meter/README.md) | mod(띠) | 컨텍스트가 손익분기 125K를 넘으면 프롬프트 위에 압축·새 세션 안내 | trial (2026-11-14) | 없음 | 테스트 2/2(terminal·desktop), Desktop 화면 표시 확인 (2026-11-14) | 안 함 | 띠가 뜬 채 떠날 때 실제로 압축했는지, 1시간 넘는 복귀 첫 턴 쓰기가 줄었는지 away 때처럼 transcript로 세기 |
 
 ## 바뀐 기록
 
@@ -29,3 +30,4 @@
 - 2026-11-13: grade-agents 0.2.0. Fable 승인 장치(ask 규칙, gate.py, 즉석 기본값)를 걷어 내고 Fable 등급 judge-max를 더했다. 승인 규칙이 Desktop과 Workflow에서 걸리지 않아서다.
 - 2026-11-14: away 0.1.0. `~/.claude/skills/away/`에 있던 스킬을 플러그인으로 옮겼다. 스크립트 경로를 `${CLAUDE_PLUGIN_ROOT}` 기준으로 바꿨고, 스킬 이름은 `away:away`가 됐다. 사용자 스킬 사본은 지웠다.
 - 2026-11-14: away를 Desktop 자동 압축과 비교했다. 자동 압축은 1시간 넘는 복귀 14번 중 3번만 걸려 away를 대신하지 않는다. 아끼는 금액은 해당 복귀 한 번에 약 $1~2다.
+- 2026-11-14: context-meter 0.1.0. Desktop은 `statusLine`을 그리지 않아(직접 시험) 프롬프트 위 띠 mod로 만들었다. 손익분기는 모델별 차이가 작아 125K 하나로 둔다.

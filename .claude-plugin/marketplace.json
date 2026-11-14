@@ -33,6 +33,13 @@
       "version": "0.1.0",
       "source": "./plugins/away",
       "category": "productivity"
+    },
+    {
+      "name": "context-meter",
+      "description": "컨텍스트가 손익분기(125K)를 넘으면 프롬프트 위에 떠나기 전 /compact·새 세션 안내 띠를 띄우는 mod",
+      "version": "0.1.0",
+      "source": "./plugins/context-meter",
+      "category": "productivity"
     }
   ]
 }

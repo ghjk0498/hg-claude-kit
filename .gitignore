@@ -5,3 +5,4 @@ __pycache__/
 results-*.json
 .claude/settings.local.json
 .DS_Store
+plugins/*/.claude-plugin/types/

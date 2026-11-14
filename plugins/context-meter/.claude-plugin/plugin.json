@@ -1,0 +1,9 @@
+{
+  "name": "context-meter",
+  "version": "0.1.0",
+  "description": "컨텍스트가 away 손익분기(약 125K)를 넘으면 프롬프트 위에 떠나기 전 /compact 안내를 띄운다",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "hg"
+  }
+}
