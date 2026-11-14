@@ -2,7 +2,9 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "hg-claude-kit",
   "description": "측정해서 쓸모가 확인된 Claude Code 도구 모음. 플러그인 단위로 켜고 끈다.",
-  "owner": {"name": "hg"},
+  "owner": {
+    "name": "hg"
+  },
   "plugins": [
     {
       "name": "torchcast",
@@ -24,6 +26,13 @@
       "version": "0.2.0",
       "source": "./plugins/grade-agents",
       "category": "development"
+    },
+    {
+      "name": "away",
+      "description": "자리를 오래 비우기 전에 컨텍스트와 프롬프트 캐시 비용을 재고 그대로 둘지·/compact·핸드오프를 정하는 스킬",
+      "version": "0.1.0",
+      "source": "./plugins/away",
+      "category": "productivity"
     }
   ]
 }
